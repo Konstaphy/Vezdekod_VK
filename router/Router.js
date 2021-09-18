@@ -31,4 +31,9 @@ router.post('/saveUser', (req, res) => {
     }
 })
 
+router.get('/hello', (req, res) => {
+    let fileContent = fs.readFileSync("response.txt", "utf8");
+    res.send(fileContent)
+})
+
 module.exports = router
