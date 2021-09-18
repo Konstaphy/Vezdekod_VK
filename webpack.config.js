@@ -37,7 +37,8 @@ module.exports = {
     },
     plugins: [
         new htmlWPP({
-            template: path.join(__dirname, 'client/public/index.html')
+            template: path.join(__dirname, 'client/public/index.html'),
+            favicon: "./favicon.svg"
         }),
     ],
     stats: 'errors-only',
