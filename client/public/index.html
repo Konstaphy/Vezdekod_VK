@@ -9,30 +9,53 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="content">
-        <div class="language">
-            <label for="language__selection" class="wrapper language__label"></label>
-            <select name="lang" id="language__selection" >
-                <option value="en" class="language__option">English</option>
-                <option value="ru" class="language__option">Russian</option>
-                <option value="ar" class="language__option">Arabic</option>
-            </select>
-        </div>
-        <div class="main-form">
-            <div class="main-from__title">
-                <h1>Form title</h1>
+    <div class="content wrapper">
+
+        <form class="main-form">
+            <div class="main-form__title">
+                <p>Registration</p>
+                <div class="language">
+                    <label for="language__selection" class="wrapper language__label"></label>
+                    <select name="lang" id="language__selection" >
+                        <option value="ru" class="language__option">Русский</option>
+                        <option value="en" class="language__option">English</option>
+                        <option value="ar" class="language__option">Arabic</option>
+                    </select>
+                </div>
             </div>
             <div class="main-form__initials">
                 <div class="main-form__name">
                     <label for="name"></label>
-                    <input type="text" name="init" id="name">
+                    <input type="text" name="init" id="name" placeholder="Name">
                 </div>
                 <div class="main-form__name">
                     <label for="surname"></label>
-                    <input type="text" name="init" id="surname">
+                    <input type="text" name="init" id="surname" placeholder="Surname">
                 </div>
             </div>
-        </div>
+
+            <div class="main-form__split-line"></div>
+
+            <div class="main-form__data">
+                <div class="main-form__email">
+                    <label for="email"></label>
+                    <input type="text" name="data" id="email" placeholder="Email">
+                </div>
+                <div class="main-form__name">
+                    <label for="company"></label>
+                    <input type="text" name="data" id="company" placeholder="Company">
+                </div>
+                <div class="main-form__city">
+                    <label for="city"></label>
+                    <input type="text" name="data" id="city" placeholder="Your city">
+                </div>
+                <div class="main-form__msg">
+                    <label for="msg"></label>
+                    <input type="text" name="data" id="msg" placeholder="Message">
+                </div>
+            </div>
+            <button class="main-from__submit-button">SEND</button>
+        </form>
     </div>
 </body>
 </html>
