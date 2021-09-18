@@ -6,12 +6,10 @@ const app = express()
 
 const PORT = process.env.PORT || 80
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/index.html"))
-})
+app.use(express.static(__dirname + '/build'));
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, "/index2.html"))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "/index.html"))
 })
 
 const start = () => {
