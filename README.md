@@ -1,7 +1,7 @@
 ## Вездекод
 
 
-####https://vk.com/@vezdekod-web-77235
+https://vk.com/@vezdekod-web-77235 <br>
 Задания 10-50 в категории web
 <br>
 <br>
