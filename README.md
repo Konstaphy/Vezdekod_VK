@@ -1,7 +1,13 @@
 ## Вездекод
 
-#### Задания <span style="color:red">10-50</span> в категории web
-<span style="color:white"><strong>Our team:</strong><br>
+Задания 10-50 в категории web
+<br>
+<br>
+<strong>Our team:</strong><br>
 -Семён Юдицкий <br>
 -Анна Цвингер <br>
--Ева Птицына <br></span>
+-Ева Птицына <br>
+
+<strong>
+Backend на express используется только лишь для удобства пользования и публикации на Heroku!!!
+</strong>
