@@ -13,14 +13,10 @@ router.post('/saveUser', (req, res) => {
 
         // add to text file
         try {
-            if (fs.existsSync(pathNeeded)){
-                fs.appendFileSync('response.txt', `${name} ${surname} with email: ${email}, works in ${company}, lives in ${city} sent message ${msg} \n\n`)
-            } else {
-                const CreateFiles = fs.createWriteStream('response.txt', {
-                    flags: 'a'
-                })
-                CreateFiles.write(`${name} ${surname} with email: ${email}, works in ${company}, lives in ${city} sent message ${msg} \n\n`)
-            }
+            const CreateFiles = fs.createWriteStream(pathNeeded, {
+                flags: 'a'
+            })
+            CreateFiles.write(`${name} ${surname} with email: ${email}, works in ${company}, lives in ${city} sent message ${msg} \n\n`)
         } catch (e) {
           return Error
         }
@@ -31,9 +27,5 @@ router.post('/saveUser', (req, res) => {
     }
 })
 
-router.get('/hello', (req, res) => {
-    let fileContent = fs.readFileSync("response.txt", "utf8");
-    res.send(fileContent)
-})
 
 module.exports = router

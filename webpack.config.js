@@ -33,6 +33,10 @@ module.exports = {
                     filename: 'static/[hash][ext][query]'
                 }
             },
+            {
+                test: /\.txt$/i,
+                use: 'raw-loader',
+            },
         ]
     },
     plugins: [
