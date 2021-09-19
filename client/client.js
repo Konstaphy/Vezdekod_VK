@@ -1,6 +1,8 @@
 import './styles.scss'
 import axios from "axios";
 const validator = require('email-validator')
+import simLetValidator from './services/similarLetters'
+const {popUpFailure, popUpSuccess} = require('./services/pop-up.js')
 
 const ru = require('./lang/ru.json')
 const en = require('./lang/en.json')
@@ -8,11 +10,13 @@ const ar = require('./lang/ar.json')
 
 // Language settings
 let initialState = {
-    currentLanguage: "ru"
+    currentLanguage: "ru",
+    counterLastTask: 0
 }
 
 const switchBox = document.getElementById('language__selection')
 
+// checks if language switched
 switchBox.addEventListener('change', () => {
     initialState.currentLanguage = switchBox.value
     changeLang(initialState.currentLanguage)
@@ -88,14 +92,6 @@ window.sendRequest = async () => {
 
     const array = [name, surname, email, company, city, msg]
 
-    // Validation
-    const wordValidation = (word) => {
-        if (word.length < 5){
-            return false
-        }
-        return true
-    }
-
     // Checks every word
     array.forEach(elem => {
         // Length
@@ -107,31 +103,11 @@ window.sendRequest = async () => {
             return 0
         }
         // Similar letters
-        let maxcounter = 0
-        let counter = 1
-        let letter = ''
-        elem.value.split("").forEach(elem => {
-            if (elem !== letter){
-                letter = elem
-                counter = 1
-            } else {
-                counter += 1
-                if (maxcounter < counter){
-                    maxcounter = counter
-                }
-            }
-        })
-
-        if (maxcounter >= 3){
-            elem.style.border = "1px solid red"
-            setTimeout(() => {
-                elem.style.border = "1px solid #ddd"
-            }, 3000)
-            return 0
-        }
+        simLetValidator(elem)
 
     })
 
+    // Checks email
      if (!validator.validate(email.value)) {
          email.style.border = "1px solid red"
          await setTimeout(() => {
@@ -150,5 +126,13 @@ window.sendRequest = async () => {
         msg: msg.value
     }).then(() => {
         array.forEach(elem => {elem.value = ''})
+        initialState.counterLastTask += 1
+    }).then(() => {
+        if (initialState.counterLastTask % 2 === 0){
+            popUpFailure(initialState.currentLanguage)
+        } else {
+            popUpSuccess(initialState.currentLanguage)
+        }
+
     })
 }

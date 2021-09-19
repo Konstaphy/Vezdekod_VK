@@ -7,5 +7,7 @@
   "company": "Company",
   "city": "City",
   "message": "Message",
-  "send": "SEND"
+  "send": "SEND",
+  "success": "Data successfully sent",
+  "failure": "Error occurred while delivering data"
 }
