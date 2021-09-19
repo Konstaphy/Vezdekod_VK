@@ -24,6 +24,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.2",
+    "json-loader": "^0.5.7",
     "raw-loader": "^4.0.2"
   },
   "devDependencies": {
