@@ -1,0 +1,11 @@
+{
+  "mode": "en",
+  "title": "Contact us",
+  "name": "Name",
+  "surname": "Surname",
+  "email": "Email",
+  "company": "Company",
+  "city": "City",
+  "message": "Message",
+  "send": "SEND"
+}
