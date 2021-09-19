@@ -26,8 +26,7 @@ const changeLang = (lang) => {
     const title = document.getElementById('title')
 
     // Getting translation
-    const string = JSON.stringify(file)
-    console.log(string)
+    title.innerHTML = file.title
 }
 
 
