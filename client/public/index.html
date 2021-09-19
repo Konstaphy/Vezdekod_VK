@@ -12,7 +12,7 @@
 
         <form class="main-form">
             <div class="main-form__title">
-                <p id="title">Registration</p>
+                <p id="title">Связь с нами</p>
                 <div class="language">
                     <label for="language__selection" class="wrapper language__label"></label>
                     <select name="lang" id="language__selection">
@@ -24,12 +24,14 @@
             </div>
             <div class="main-form__initials">
                 <div class="main-form__name">
+                    <p id="nameTitle">Имя:</p>
                     <label for="name"></label>
-                    <input type="text" name="init" id="name" placeholder="Name">
+                    <input type="text" name="init" id="name" placeholder="Имя">
                 </div>
-                <div class="main-form__name">
+                <div class="main-form__surname">
+                    <p id="surnameTitle">Фамилия:</p>
                     <label for="surname"></label>
-                    <input type="text" name="init" id="surname" placeholder="Surname">
+                    <input type="text" name="init" id="surname" placeholder="Фамилия">
                 </div>
             </div>
 
@@ -37,23 +39,27 @@
 
             <div class="main-form__data">
                 <div class="main-form__email">
+                    <p id="emailTitle">Email:</p>
                     <label for="email"></label>
                     <input type="text" name="data" id="email" placeholder="Email">
                 </div>
-                <div class="main-form__name">
+                <div class="main-form__company">
+                    <p id="companyTitle">Компания:</p>
                     <label for="company"></label>
-                    <input type="text" name="data" id="company" placeholder="Company">
+                    <input type="text" name="data" id="company" placeholder="Компания">
                 </div>
                 <div class="main-form__city">
+                    <p id="cityTitle">Город:</p>
                     <label for="city"></label>
-                    <input type="text" name="data" id="city" placeholder="Your city">
+                    <input type="text" name="data" id="city" placeholder="Город">
                 </div>
                 <div class="main-form__msg">
+                    <p id="msgTitle">Сообщение:</p>
                     <label for="msg"></label>
-                    <input type="text" name="data" id="msg" placeholder="Message">
+                    <input type="text" name="data" id="msg" placeholder="Сообщение">
                 </div>
             </div>
-            <button type="button" class="main-from__submit-button" id="send">SEND</button>
+            <button type="button" class="main-form__submit-button" id="send">Отправить</button>
         </form>
     </div>
 </body>
