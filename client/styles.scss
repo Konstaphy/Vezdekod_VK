@@ -111,4 +111,18 @@ body{
     }
 }
 
+.content.ar {
+    .main-form__name,
+    .main-form__surname,
+    .main-form__email,
+    .main-form__company,
+    .main-form__city,
+    .main-form__msg,{
+        flex-direction: row-reverse;
+    }
+    input {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+    }
+}
 

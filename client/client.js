@@ -18,6 +18,10 @@ switchBox.addEventListener('change', () => {
     changeLang(initialState.currentLanguage)
 })
 
+const body = document.getElementsByClassName('content')
+
+
+
 // Switch languages
 const changeLang = (lang) => {
     // Getting json
@@ -50,6 +54,12 @@ const changeLang = (lang) => {
     // Button
     document.getElementById('send').innerHTML = file.send
 
+    // Orientation
+    if (initialState.currentLanguage === 'ar'){
+        body[0].classList.add('ar')
+    } else {
+        body[0].classList.remove('ar')
+    }
 }
 
 
