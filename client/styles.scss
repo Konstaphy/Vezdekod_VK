@@ -60,6 +60,13 @@ body{
             display: grid;
             gap: 10px;
             grid-template-columns: 1fr;
+            .main-form__name,
+            .main-form__surname{
+                display: flex;
+                p {
+                    margin: auto 5px;
+                }
+            }
             input{
                 @include text-field;
             }
@@ -73,12 +80,22 @@ body{
         .main-form__data{
             display: grid;
             gap: 10px;
+            .main-form__email,
+            .main-form__company,
+            .main-form__city,
+            .main-form__msg,
+            {
+                display: flex;
+                p{
+                    margin: auto 5px;
+                }
+            }
             input{
                 @include text-field;
             }
         }
         //Button
-        .main-from__submit-button{
+        .main-form__submit-button{
             background-color: #5d912b;
             color: white;
             box-shadow: 0 0 2px rgba(34, 34, 34, 0.32);
@@ -89,6 +106,7 @@ body{
             font-weight: bold;
             border-radius: 10px;
             margin: auto;
+            text-transform: uppercase;
         }
     }
 }
