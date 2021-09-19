@@ -36,7 +36,7 @@ body{
     background-color: #fff;
     box-shadow: 0 0 15px rgba(34, 34, 34, 0.32);
     padding: 10px;
-    margin: auto;
+    margin: 0 auto auto auto;
     .main-form{
         display: flex;
         flex-direction: column;
@@ -126,3 +126,23 @@ body{
     }
 }
 
+#pop-up{
+    position: relative;
+    width: 80%;
+    font-family: "Roboto", sans-serif;
+    height: auto;
+    padding: 10px;
+    font-size: 14px;
+    margin: auto auto 0 auto;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    &.success{
+        background-color: #97d97f;
+        visibility: visible;
+    }
+    &.failure{
+        background-color: #c95d46;
+        visibility: visible;
+    }
+}
